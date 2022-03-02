@@ -1,5 +1,4 @@
-let cargadorDePrimos   = [1];
-let crivaDeEratostebes = [2,3,7,11];
+let crivaDeEratostebes = [2,3,5,7,11];
 let count = 0;
 let txt = " <table><tr><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th></tr><tr>";
 const cargador = document.getElementById("cargador");
@@ -12,37 +11,39 @@ const cargador = document.getElementById("cargador");
 2.
 */    
 
-for(let i = 1 ; i <= 100 ; i++){
+for(let i = 1; i <= 1000 ; i++){
     
-    
-    cargadorDePrimos.push(i);
     let confirmador = false;
 
-        if(    i % 2    != 0
-            && i % 3    != 0
-            && i % 7    != 0
-            && i % 11   != 0
-            
-            )
-        
-        confirmador = true;
- 
-
+    if(i > 11){
+             if(   i % 2    != 0
+                && i % 3    != 0
+                && i % 5    != 0
+                && i % 7    != 0
+                && i % 11   != 0
+                && i % 13   != 0
+                )confirmador = true;
+    }
     
-    if( confirmador) {
-
-        crivaDeEratostebes  .push(i);
-
-    
-        if(count == 10){
-                txt += `</tr><tr>`;
-                count = 0;
-        }
-        count++;
-        txt += `<td>${cargadorDePrimos[i]}</td>` ;    
-    };        
+    if( confirmador)  crivaDeEratostebes  .push(i);
+       
 
 }
+
+crivaDeEratostebes.forEach((item)=>{
+
+    if(count == 10){
+        txt += `</tr><tr>`;
+        count = 0;
+    }
+    count++;
+    txt += `<td>${item}</td>` ;
+});
+
+
+
+
+
 
 txt += `</tr></table>
 <style>
