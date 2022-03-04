@@ -1,6 +1,6 @@
 let crivaDeEratostebes = [2,3,5,7,11];
 let count = 0;
-let txt = " <table><tr><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th></tr><tr>";
+let txt = " <table><caption>Tabla de números primos hasta el 1000</caption><tr><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th><th>TERMINO</th></tr><tr>";
 const cargador = document.getElementById("cargador");
 
 /*

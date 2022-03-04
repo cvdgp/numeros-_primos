@@ -1,16 +1,35 @@
 table, th, td {
-    padding: 1em;
+    padding: 0.8em;
     border: 2px solid;
-    margin: 5px;
+    margin: 1px;
     text-align: center;
 }
 table{
     width: 80%;
+    background-color: #2c2b27;
 }
 body{
-    background: linear-gradient(63deg, #999 23%, transparent 23%) 7px 0,
-    linear-gradient(63deg, transparent 74%, #999 78%),
-    linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%),
-    #444;
-    background-size: 16px 48px;
+    background:
+    #6d695c;
+    background-image:
+    repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-size: 70px 120px;
+   
+}
+.texto{
+    font-size: 2em;
+    padding: 2em;
+    color: rgb(27, 199, 147);
+    background: url("img/double-bubble-dark.png");
+}
+table>caption{
+
+    font-size: 2em;
+    font-weight: bold;
+    color: aliceblue;
+    margin-bottom: 1.5em;
+    background: url(img/vision.png);
 }
