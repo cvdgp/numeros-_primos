@@ -6,7 +6,7 @@ const cargador = document.getElementById("cargador");
 /*
  
 
-1. Extraer tabla de números primos hasta el 100 y almacenarlo.
+1. Extraer tabla de números primos hasta el 1000 y almacenarlo.
     1.1 
 2.
 */    
@@ -56,6 +56,9 @@ th, td {
     border: 2px solid;
     margin: 1px;
     text-align: center;
+}
+td{
+    background: grey;
 }
 table{
     width: 80%;
