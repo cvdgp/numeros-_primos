@@ -10,24 +10,25 @@ const cargador = document.getElementById("cargador");
     1.1 
 2.
 */    
-
+let contador=0;
 for(let i = 1; i <= 1000 ; i++){
     
     let confirmador = false;
-
+    
     if(i > 11){
-             if(   i % 2    != 0
-                && i % 3    != 0
-                && i % 5    != 0
-                && i % 7    != 0
-                && i % 11   != 0
-                && i % 13   != 0
-                )confirmador = true;
+           
+             if(   i % 2    !== 0
+                && i % 3    !== 0
+                && i % 5    !== 0
+                && i % 7    !== 0
+                && i % 11   !== 0
+                )confirmador =  true;
     }
     
-    if( confirmador)  crivaDeEratostebes  .push(i);
-       
-
+    if( confirmador)  {
+        crivaDeEratostebes  .push(i);
+        contador++;
+    }
 }
 
 crivaDeEratostebes.forEach((item)=>{
@@ -39,10 +40,6 @@ crivaDeEratostebes.forEach((item)=>{
     count++;
     txt += `<td>${item}</td>` ;
 });
-
-
-
-
 
 
 txt += `</tr></table>
@@ -63,4 +60,23 @@ table{
 }
 </style>
 `;
+txt += `<div>${contador}</div>`;
 cargador.innerHTML    = txt;
+/**   copia pega*/
+
+
+
+function esPrimo(numero) {
+    let count=0;
+    for(let i = 2,raiz=Math.sqrt(numero); i <= raiz; i++)
+        if(numero % i === 0) return false;
+    return numero > 1;
+}  
+
+for (let x=0;x<=1000;x++) {
+    if (esPrimo(x)){
+        console.log("El número " + x + " es primo"+ " iteración " + count);
+
+        count++;
+}
+}
