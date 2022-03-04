@@ -11,25 +11,29 @@ const cargador = document.getElementById("cargador");
 2.
 */    
 let contador=0;
+function esPrimo(numero) {
+    let count=0;
+    for(let i = 2, raiz = Math.sqrt(numero) ; i <= raiz;  i++)
+        if(numero % i === 0) return false;
+
+    return numero > 1;
+} 
+
 for(let i = 1; i <= 1000 ; i++){
     
     let confirmador = false;
     
-    if(i > 11){
-           
-             if(   i % 2    !== 0
-                && i % 3    !== 0
-                && i % 5    !== 0
-                && i % 7    !== 0
-                && i % 11   !== 0
-                )confirmador =  true;
-    }
     
-    if( confirmador)  {
+    if( esPrimo(i))  {
         crivaDeEratostebes  .push(i);
         contador++;
+        
     }
 }
+
+
+
+/* una vez cargado el array lo volcamos en la pagina */
 
 crivaDeEratostebes.forEach((item)=>{
 
@@ -66,17 +70,5 @@ cargador.innerHTML    = txt;
 
 
 
-function esPrimo(numero) {
-    let count=0;
-    for(let i = 2,raiz=Math.sqrt(numero); i <= raiz; i++)
-        if(numero % i === 0) return false;
-    return numero > 1;
-}  
+ 
 
-for (let x=0;x<=1000;x++) {
-    if (esPrimo(x)){
-        console.log("El número " + x + " es primo"+ " iteración " + count);
-
-        count++;
-}
-}
